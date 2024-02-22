@@ -1,0 +1,65 @@
+.tb_departments .post-header {
+  cursor: default;
+}
+
+.tb_departments .post-header span.badge {
+  font-size: 14px;
+}
+
+.tb_departments .post-header a {
+  padding-left: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-dark);
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.tb_departments .post-header a:hover {
+  color: var(--color-purple);
+}
+
+.tb_departments .post-footer {
+  padding-top: 10px;
+  font-size: 12px;
+  color: var(--color-dark-light);
+}
+
+.tb_departments .post-footer .footer-item {
+  cursor: default;
+}
+
+.tb_departments .post-footer .footer-item:nth-child(1) {
+  width: 100px;
+}
+
+.tb_departments .post-footer .footer-item:nth-child(1) span {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.tb_departments .post-footer .footer-item:nth-child(1) span:hover {
+  color: var(--color-primary);
+}
+
+.tb_departments .post-footer .footer-item:nth-child(1) span.no-category:hover {
+  color: var(--color-dark-light);
+}
+
+.tb_departments .post-footer .footer-item:nth-child(2), .tb_departments .post-footer .footer-item:nth-child(3) {
+  width: 100px;
+}
+
+.tb_departments .post-footer .footer-item .footer-item-label::after {
+  content: ':';
+  padding-right: 5px;
+}
+
+.tb_departments .action {
+  min-width: 220px;
+  width: 220px;
+}

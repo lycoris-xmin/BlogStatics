@@ -1,0 +1,53 @@
+.nav-item-has-subnav > a:after {
+  font-size: 12px;
+}
+
+.img-avatar {
+  border: 1px solid var(--color-secondary);
+}
+
+.modal-open .modal.show {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-open .modal.show .modal-dialog {
+  margin: 7.75rem auto 1.75rem auto;
+}
+
+#user-profile-Modal .modal-dialog {
+  max-width: 600px;
+}
+
+#user-profile-Modal form .avatar {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+#user-profile-Modal form .avatar img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--color-secondary);
+  cursor: pointer;
+}
+
+#user-profile-Modal form .more {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+#user-profile-Modal form .more-text {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#user-profile-Modal form .more-text span {
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+#user-profile-Modal form .more-text span.show, #user-profile-Modal form .more-text span:hover {
+  color: var(--color-purple);
+}

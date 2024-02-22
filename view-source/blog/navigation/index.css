@@ -1,0 +1,82 @@
+.nav-panel li {
+  margin-bottom: 18px;
+}
+
+.nav-group {
+  padding: 25px;
+}
+
+.nav-group .group-header {
+  padding-bottom: 2px;
+  margin-bottom: 25px;
+}
+
+.nav-group .group-header h2 {
+  font-weight: 600;
+}
+
+.nav-group .group-body {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-group .nav-card {
+  position: relative;
+  border-radius: 5px;
+  padding: 8px 15px;
+  z-index: 1;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.nav-group .nav-card .mdi {
+  margin-top: 1px;
+  margin-right: 5px;
+}
+
+.nav-group .nav-card img {
+  height: 15px;
+  width: 15px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+.nav-group .nav-card span {
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.nav-group .nav-card::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--color-danger);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-group .nav-card:hover span {
+  color: #fff;
+}
+
+.nav-group .nav-card:hover::after {
+  left: 0;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+#create-update-Modal .modal-dialog {
+  max-width: 650px;
+}
+
+#create-update-Modal .content-body {
+  position: relative;
+}
+
+#create-update-Modal .content-body .form-control {
+  height: 300px;
+  resize: none;
+  font-size: 16px;
+  color: #000;
+}
+
+#create-update-Modal .content-body .limit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 5px;
+  color: var(--color-dark-light);
+}

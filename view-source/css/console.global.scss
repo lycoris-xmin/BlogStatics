@@ -1,0 +1,53 @@
+.modal-dialog {
+  .modal-content {
+    box-shadow: 0px 0px 7px 1px rgba(171, 171, 171, 0.7);
+  }
+}
+
+input,
+textarea {
+  &.form-control {
+    border-color: var(--color-secondary);
+  }
+}
+
+.dropdown-menu {
+  border: 1px solid var(--color-secondary);
+}
+
+.page-card {
+  .filter-panel {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+    padding: 15px 0;
+
+    @media (max-width: 1920px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (max-width: 1366px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .form-group {
+      margin: 0;
+    }
+  }
+
+  .bootstrap-table {
+    border: 0;
+
+    .fixed-table-container {
+      border-bottom: 0 !important;
+    }
+
+    .fixed-table-border {
+      border: 0 !important;
+
+      * {
+        border: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.modal-dialog .modal-content {
+  box-shadow: 0px 0px 7px 1px rgba(171, 171, 171, 0.7);
+}
+
+input.form-control,
+textarea.form-control {
+  border-color: var(--color-secondary);
+}
+
+.dropdown-menu {
+  border: 1px solid var(--color-secondary);
+}
+
+.page-card .filter-panel {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 20px;
+  padding: 15px 0;
+}
+
+@media (max-width: 1920px) {
+  .page-card .filter-panel {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1366px) {
+  .page-card .filter-panel {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.page-card .filter-panel .form-group {
+  margin: 0;
+}
+
+.page-card .bootstrap-table {
+  border: 0;
+}
+
+.page-card .bootstrap-table .fixed-table-container {
+  border-bottom: 0 !important;
+}
+
+.page-card .bootstrap-table .fixed-table-border {
+  border: 0 !important;
+}
+
+.page-card .bootstrap-table .fixed-table-border * {
+  border: 0 !important;
+}

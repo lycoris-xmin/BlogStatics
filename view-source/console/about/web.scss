@@ -1,0 +1,32 @@
+.card-header {
+  border-bottom: 0;
+
+  .flex-between-center {
+    width: 100%;
+
+    .btn {
+      width: 80px;
+      margin-right: 15px;
+
+      &.btn-dark,
+      &.btn-outline-dark {
+        width: 130px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.card-body {
+  position: relative;
+  height: -webkit-calc(100vh - 120px) !important;
+  height: -moz-calc(100vh - 120px) !important;
+  height: calc(100vh - 120px) !important;
+  border: 1.5px solid var(--color-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+}

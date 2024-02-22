@@ -1,0 +1,52 @@
+.tb_departments {
+  td {
+    $avatar-size: 60px;
+
+    .avatar {
+      height: $avatar-size;
+      width: $avatar-size;
+      border-radius: 50%;
+      border: 1px solid var(--color-secondary);
+      overflow: hidden;
+
+      img {
+        height: $avatar-size;
+        width: $avatar-size;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+#create-update-Modal {
+  .modal-dialog {
+    max-width: 550px;
+  }
+
+  .more-text {
+    display: block;
+
+    .mdi {
+      padding-top: 1px;
+    }
+  }
+
+  .more {
+    display: none;
+  }
+
+  .modal-body {
+    max-height: 930px;
+    overflow-y: auto;
+
+    @media (max-height: 1080px) {
+      max-height: 700px;
+    }
+  }
+}
+
+#status-Modal {
+  .modal-dialog {
+    max-width: 500px;
+  }
+}

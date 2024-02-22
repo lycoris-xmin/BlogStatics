@@ -1,0 +1,204 @@
+.talk-group {
+  padding: 15px 0;
+}
+
+.talk-group > li {
+  margin-bottom: 18px;
+  -webkit-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -moz-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: flip-in-hor-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.talk-group > li:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.talk-group > li:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.talk-group > li:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.talk-group > li:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.talk-group > li:nth-child(5) {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.talk-group > li:nth-child(6) {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.talk-group > li:nth-child(7) {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.talk-group > li:nth-child(8) {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.talk-group > li:nth-child(9) {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+
+.talk-group > li:nth-child(10) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.talk-group > li:last-child {
+  margin-bottom: 0;
+}
+
+.talk-group > li .card {
+  background-color: #fff;
+}
+
+.talk-group > li .card:has(p.empty-text) {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.talk-group > li .card:has(p.empty-text) .empty-text {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-align: inherit;
+  cursor: default;
+}
+
+.talk-group > li .card:has(p.empty-text) img {
+  height: 150px;
+}
+
+.talk-group > li .card .card-header {
+  height: 80px;
+}
+
+.talk-group > li .card .card-header .flex-start-center .avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--color-secondary);
+  overflow: hidden;
+}
+
+.talk-group > li .card .card-header .flex-start-center .avatar img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.talk-group > li .card .card-header .flex-start-center > div:last-child {
+  padding-left: 20px;
+}
+
+.talk-group > li .card .card-header .flex-start-center > div:last-child span {
+  display: block;
+  cursor: default;
+}
+
+.talk-group > li .card .card-header .flex-start-center > div:last-child span:first-child {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.talk-group > li .card .card-header .flex-start-center > div:last-child span:last-child {
+  font-size: 14px;
+  color: var(--color-dark-light);
+}
+
+.talk-group > li .card .card-header .flex-end-center > div:first-child {
+  padding-right: 15px;
+  color: var(--color-dark-light);
+}
+
+.talk-group > li .card .card-header .flex-end-center > div:first-child .mdi {
+  margin-right: 3px;
+}
+
+.talk-group > li .card .card-header .flex-end-center .client {
+  height: 25px;
+  object-fit: fill;
+  cursor: default;
+}
+
+.talk-group > li .card .card-body {
+  cursor: default;
+}
+
+.talk-group > li .card .card-body p {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    -moz-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    -moz-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}

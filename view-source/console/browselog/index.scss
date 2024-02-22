@@ -1,0 +1,25 @@
+.tb_departments {
+  --route-width: 350px;
+
+  @media (max-width: 1920px) {
+    --route-width: 300px;
+  }
+
+  th {
+    &[data-field='route'] {
+      width: var(--route-width);
+    }
+  }
+
+  .cell-page {
+    width: 100%;
+  }
+
+  .cell-route {
+    width: var(--route-width);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+  }
+}

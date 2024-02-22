@@ -1,0 +1,90 @@
+.description {
+  border: 1px solid var(--color-secondary);
+  border-radius: 5px;
+
+  .description-item {
+    display: grid;
+
+    &.fill {
+      grid-template-columns: 100px 1fr;
+    }
+
+    &.des-col-2 {
+      grid-template-columns: 100px 1fr 100px 1fr;
+
+      .title {
+        &:nth-child(3) {
+          border-left: 1px solid var(--color-secondary);
+        }
+      }
+    }
+
+    .title {
+      cursor: default;
+      border-right: 1px solid var(--color-secondary);
+      background-color: #f1f1f1;
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .value {
+      overflow: hidden;
+
+      a,
+      p,
+      pre {
+        font-size: 16px;
+        font-weight: 400;
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: break-spaces;
+      }
+
+      a {
+        padding: 10px;
+        color: var(--color-purple);
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+
+        &::before {
+          content: '#';
+          padding-right: 5px;
+        }
+
+        &:hover {
+          color: var(--color-info);
+        }
+      }
+
+      span {
+        &.badge {
+          font-size: 12px;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  > div {
+    border-bottom: 1px solid var(--color-secondary);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  p,
+  pre {
+    padding: 10px;
+    margin: 0;
+  }
+
+  pre {
+    background-color: #fff;
+  }
+}

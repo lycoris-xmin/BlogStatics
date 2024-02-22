@@ -1,0 +1,156 @@
+.tb_departments {
+  .cell-fileName {
+    > div {
+      .fileName {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--color-purple);
+        }
+      }
+
+      .flex-start-center {
+        gap: 20px;
+        span {
+          display: block;
+
+          &.path {
+            color: var(--color-dark-light);
+            min-width: 220px;
+            max-width: 460px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &.size {
+            width: 100px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+#viewDetail-Modal {
+  .modal-dialog {
+    max-width: 600px;
+
+    .file-body {
+      position: relative;
+    }
+  }
+
+  .view-file {
+    > div {
+      height: 160px;
+
+      &:has(img) {
+        width: 250px;
+        height: 160px;
+        border-radius: 5px;
+        border: 1px solid var(--color-secondary);
+        overflow: hidden;
+      }
+    }
+
+    img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    video {
+      height: 160px;
+      width: 350px;
+    }
+
+    .mdi {
+      font-size: 36px;
+    }
+  }
+
+  .file-item {
+    margin-bottom: 10px;
+
+    &:first-child {
+      margin-bottom: 18px;
+    }
+
+    &:nth-child(n + 2) {
+      padding: 0 15px;
+      display: grid;
+      grid-template-columns: 85px 1fr;
+    }
+
+    span {
+      font-size: 16px;
+    }
+
+    .title {
+      font-weight: 500;
+
+      &::after {
+        content: ':';
+        padding-right: 5px;
+      }
+    }
+
+    .value {
+      overflow: hidden;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      cursor: default;
+
+      &[data-field='pathUrl'],
+      &[data-field='remoteUrl'] {
+        cursor: pointer;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--color-purple);
+        }
+      }
+    }
+  }
+
+  .change {
+    text-align: center;
+    font-size: 16px;
+
+    span {
+      border-radius: 4px;
+      border: 1px solid var(--color-secondary);
+
+      &.mdi {
+        padding: 4px 11px 3px 11px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+          background-color: var(--color-info);
+        }
+      }
+
+      &.index {
+        padding: 4px 16px 4px 16px;
+        cursor: default;
+        margin: 0 15px;
+      }
+    }
+  }
+}

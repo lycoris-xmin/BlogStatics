@@ -1,0 +1,86 @@
+.description {
+  border: 1px solid var(--color-secondary);
+  border-radius: 5px;
+}
+
+.description .description-item {
+  display: grid;
+}
+
+.description .description-item.fill {
+  grid-template-columns: 100px 1fr;
+}
+
+.description .description-item.des-col-2 {
+  grid-template-columns: 100px 1fr 100px 1fr;
+}
+
+.description .description-item.des-col-2 .title:nth-child(3) {
+  border-left: 1px solid var(--color-secondary);
+}
+
+.description .description-item .title {
+  cursor: default;
+  border-right: 1px solid var(--color-secondary);
+  background-color: #f1f1f1;
+}
+
+.description .description-item .title p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.description .description-item .value {
+  overflow: hidden;
+}
+
+.description .description-item .value a,
+.description .description-item .value p,
+.description .description-item .value pre {
+  font-size: 16px;
+  font-weight: 400;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: break-spaces;
+}
+
+.description .description-item .value a {
+  padding: 10px;
+  color: var(--color-purple);
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.description .description-item .value a::before {
+  content: '#';
+  padding-right: 5px;
+}
+
+.description .description-item .value a:hover {
+  color: var(--color-info);
+}
+
+.description .description-item .value span.badge {
+  font-size: 12px;
+  cursor: default;
+}
+
+.description > div {
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.description > div:last-child {
+  border-bottom: 0;
+}
+
+.description p,
+.description pre {
+  padding: 10px;
+  margin: 0;
+}
+
+.description pre {
+  background-color: #fff;
+}

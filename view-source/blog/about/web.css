@@ -1,0 +1,98 @@
+.container {
+  --body-right-width: 350px;
+}
+
+.container > .body {
+  display: grid;
+  grid-template-columns: 1fr var(--body-right-width);
+}
+
+.container > .body > div {
+  padding: 10px 15px;
+}
+
+.container > .body > div .card {
+  margin-bottom: 20px;
+}
+
+.container > .body > div .card:last-child {
+  margin-bottom: 0;
+}
+
+.container > .body .markdown > .card {
+  min-height: -webkit-calc(100vh - 325px);
+  min-height: -moz-calc(100vh - 325px);
+  min-height: calc(100vh - 325px);
+  height: 100%;
+}
+
+.container > .body .logo {
+  padding: 20px 0;
+}
+
+.container > .body .logo > .flex-center-center:first-child {
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  flex-direction: column;
+}
+
+.container > .body .logo > .flex-center-center img {
+  width: 120px;
+}
+
+.container > .body .interactive {
+  padding: 15px 0;
+}
+
+.container > .body #category-echarts {
+  height: -webkit-calc(var(--body-right-width) - 55px);
+  height: -moz-calc(var(--body-right-width) - 55px);
+  height: calc(var(--body-right-width) - 55px);
+  width: -webkit-calc(var(--body-right-width) - 55px);
+  width: -moz-calc(var(--body-right-width) - 55px);
+  width: calc(var(--body-right-width) - 55px);
+  overflow: hidden;
+}
+
+.container > .body #world-cloud-echarts {
+  height: -webkit-calc(var(--body-right-width) - 55px);
+  height: -moz-calc(var(--body-right-width) - 55px);
+  height: calc(var(--body-right-width) - 55px);
+  width: -webkit-calc(var(--body-right-width) - 55px);
+  width: -moz-calc(var(--body-right-width) - 55px);
+  width: calc(var(--body-right-width) - 55px);
+  overflow: hidden;
+}
+
+.interactive .interactive-item {
+  width: 65px;
+  text-align: center;
+}
+
+.interactive .interactive-item > span {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  cursor: default;
+}
+
+.interactive .interactive-item > span.mdi-loading {
+  color: var(--color-purple);
+}
+
+.interactive .interactive-item > span:first-child {
+  padding-bottom: 10px;
+}
+
+.interactive .interactive-item:nth-child(1) .mdi {
+  color: var(--color-danger);
+}
+
+.interactive .interactive-item:nth-child(2) .mdi {
+  color: var(--color-info);
+}
+
+.interactive .interactive-item:nth-child(3) .mdi {
+  color: var(--color-purple);
+}

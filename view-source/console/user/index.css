@@ -1,0 +1,44 @@
+.tb_departments td .avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--color-secondary);
+  overflow: hidden;
+}
+
+.tb_departments td .avatar img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+
+#create-update-Modal .modal-dialog {
+  max-width: 550px;
+}
+
+#create-update-Modal .more-text {
+  display: block;
+}
+
+#create-update-Modal .more-text .mdi {
+  padding-top: 1px;
+}
+
+#create-update-Modal .more {
+  display: none;
+}
+
+#create-update-Modal .modal-body {
+  max-height: 930px;
+  overflow-y: auto;
+}
+
+@media (max-height: 1080px) {
+  #create-update-Modal .modal-body {
+    max-height: 700px;
+  }
+}
+
+#status-Modal .modal-dialog {
+  max-width: 500px;
+}

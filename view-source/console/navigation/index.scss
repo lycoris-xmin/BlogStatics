@@ -1,0 +1,120 @@
+.tb_departments {
+  .link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-purple);
+    }
+  }
+}
+
+.modal {
+  .tool {
+    margin-bottom: 10px;
+
+    small {
+      padding-left: 10px;
+    }
+  }
+
+  .group-panel {
+    position: relative;
+    min-height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: none;
+
+      .mdi-loading {
+        font-size: 40px;
+        color: var(--color-info);
+      }
+    }
+
+    &.loading {
+      .loading-overlay {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: flex;
+      }
+    }
+  }
+
+  .group-list {
+    margin: 0;
+    padding: 0;
+
+    > li {
+      display: grid;
+      grid-template-columns: minmax(20px, 1fr) 50px;
+      -webkit-column-gap: 5px;
+      -moz-column-gap: 5px;
+      column-gap: 5px;
+      padding: 8px 10px;
+      border: 1px solid var(--color-secondary);
+      border-radius: 5px;
+      margin-bottom: 5px;
+      cursor: move;
+
+      p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      > .flex-center-center {
+        .mdi {
+          display: block;
+          font-size: 18px;
+          color: var(--color-info);
+          -webkit-transition: color 0.3s;
+          -moz-transition: color 0.3s;
+          transition: color 0.3s;
+          cursor: pointer;
+        }
+
+        > div {
+          &:first-child {
+            margin-right: 14px;
+          }
+
+          &:has(.mdi-pencil):hover {
+            .mdi {
+              color: var(--color-warning);
+            }
+          }
+
+          &:has(.mdi-delete):hover {
+            .mdi {
+              color: var(--color-danger);
+            }
+          }
+
+          .mdi-loading {
+            display: none;
+          }
+
+          &.loading {
+            .mdi {
+              display: none;
+
+              &.mdi-loading {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,371 @@
+.post-comment {
+  margin: 20px 0;
+}
+
+.post-comment > div {
+  padding: 0 20px;
+}
+
+.post-comment .header {
+  margin-bottom: 25px;
+  padding-top: 20px;
+}
+
+.post-comment .header > span {
+  font-size: 24px;
+  letter-spacing: 2.5px;
+  padding-bottom: 6px;
+  background: var(--main-linear-gradient) no-repeat left bottom;
+  background-size: 75% 3px;
+}
+
+.post-comment .header > span .mdi {
+  font-size: 22px;
+}
+
+.post-comment .comment-action {
+  position: relative;
+  padding-top: 15px;
+  width: 100%;
+}
+
+.post-comment .comment-action:has(.login-wrap) .comment {
+  color: transparent;
+}
+
+.post-comment .comment-action:has(.login-wrap) .comment::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.post-comment .comment-action:has(.login-wrap) .comment:-moz-placeholder {
+  color: transparent;
+}
+
+.post-comment .comment-action:has(.login-wrap) .comment::-moz-placeholder {
+  color: transparent;
+}
+
+.post-comment .comment-action:has(.login-wrap) .comment::placeholder {
+  color: transparent;
+}
+
+.post-comment .comment-action:has(.login-wrap) p.limit {
+  display: none;
+}
+
+.post-comment .comment-action:has(.login-wrap) > div.flex-end-center {
+  display: none;
+}
+
+.post-comment .comment-action > div {
+  position: relative;
+  border-radius: 5px;
+}
+
+.post-comment .comment-action > div:first-child {
+  height: 120px;
+}
+
+.post-comment .comment-action > div.flex-end-center {
+  padding: 10px 0;
+}
+
+.post-comment .comment-action .input-control {
+  font-size: 18px;
+}
+
+.post-comment .comment {
+  height: 100%;
+}
+
+.post-comment .limit {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  color: var(--color-dark-light);
+}
+
+.post-comment .limit.max {
+  color: var(--color-danger);
+}
+
+.post-comment .login-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  border: inherit;
+  background-color: rgba(229, 224, 224, 0.6);
+}
+
+.post-comment .comment-btn {
+  color: #fff;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: var(--color-info);
+}
+
+.post-comment .comment-btn:hover {
+  color: var(--color-info);
+  background: transparent;
+}
+
+.post-comment .comment-btn:before, .post-comment .comment-btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-info);
+  -webkit-transition: 400ms ease all;
+  -moz-transition: 400ms ease all;
+  transition: 400ms ease all;
+}
+
+.post-comment .comment-btn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.post-comment .comment-btn:hover:before, .post-comment .comment-btn:hover:after {
+  width: 100%;
+  -webkit-transition: 800ms ease all;
+  -moz-transition: 800ms ease all;
+  transition: 800ms ease all;
+}
+
+.post-comment .comment-body {
+  padding-top: 20px;
+}
+
+.post-comment .comment-body .comment-total {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.post-comment .comment-body .comment-list-panel {
+  position: relative;
+  min-height: 200px;
+  margin-top: 18px;
+}
+
+.post-comment .comment-body .pagination-btn {
+  padding: 28px 0;
+}
+
+.post-comment .comment-list {
+  min-height: 200px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.post-comment .comment-list:has(.comment-item) .empty {
+  display: none;
+}
+
+.post-comment .comment-list li {
+  margin-bottom: 30px;
+}
+
+.post-comment .comment-list li:last-child {
+  margin-bottom: 0;
+}
+
+.post-comment .comment-list li.comment-item:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.post-comment .comment-list .empty {
+  height: 100%;
+  width: 100%;
+  cursor: default;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  flex-direction: column;
+}
+
+.post-comment .comment-list .empty img {
+  height: 140px;
+  width: 140px;
+  object-fit: fill;
+}
+
+.post-comment .comment-list .empty span {
+  padding: 10px 0;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.post-comment .comment-list .comment-item {
+  -webkit-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -moz-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: flip-in-hor-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.post-comment .comment-list .comment-item .flex-between-center {
+  padding-bottom: 5px;
+  border-bottom: 1px dashed var(--color-secondary);
+}
+
+.post-comment .comment-list .comment-item .flex-between-center > div {
+  position: relative;
+}
+
+.post-comment .comment-list .comment-item .flex-between-center > div:last-child {
+  cursor: default;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  align-items: center;
+}
+
+.post-comment .comment-list .comment-item .flex-between-center > div:last-child span:first-child {
+  position: relative;
+  height: 24px;
+  width: 20px;
+}
+
+.post-comment .comment-list .comment-item .flex-between-center > div:last-child span:first-child .mdi {
+  position: absolute;
+  top: 4px;
+}
+
+.post-comment .comment-list .comment-item .flex-between-center > div:last-child .address {
+  padding-right: 15px;
+}
+
+.post-comment .comment-list .comment-item .flex-between-center > div:last-child .client {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.post-comment .comment-list .comment-item .user .avatar {
+  --icon-size: 45px;
+  height: var(--icon-size);
+  width: var(--icon-size);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-danger);
+}
+
+.post-comment .comment-list .comment-item .user .avatar img {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.post-comment .comment-list .comment-item .user .avatar .mdi {
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.post-comment .comment-list .comment-item .user .avatar:has(.mdi) {
+  position: relative;
+}
+
+.post-comment .comment-list .comment-item .user > .flex-center-center div:last-child {
+  padding-left: 15px;
+}
+
+.post-comment .comment-list .comment-item .user .name {
+  font-size: 16px;
+}
+
+.post-comment .comment-list .comment-item .user .name .owner {
+  margin-left: 5px;
+}
+
+.post-comment .comment-list .comment-item .user .time {
+  font-size: 12px;
+  color: var(--color-dark-light);
+}
+
+.post-comment .comment-list .comment-item .content {
+  padding: 10px 8px;
+  letter-spacing: 1.5px;
+}
+
+.post-comment .comment-list .comment-item .content .reply {
+  padding-right: 4px;
+  color: var(--color-info);
+  cursor: pointer;
+}
+
+.post-comment .comment-list .comment-item .content .reply:hover {
+  color: var(--color-purple);
+}
+
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    -moz-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    -moz-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}

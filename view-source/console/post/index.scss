@@ -1,0 +1,70 @@
+.tb_departments {
+  .post-header {
+    cursor: default;
+    span.badge {
+      font-size: 14px;
+    }
+
+    a {
+      padding-left: 6px;
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--color-dark);
+      cursor: pointer;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+
+      &:hover {
+        color: var(--color-purple);
+      }
+    }
+  }
+
+  .post-footer {
+    padding-top: 10px;
+    font-size: 12px;
+    color: var(--color-dark-light);
+
+    .footer-item {
+      cursor: default;
+
+      &:nth-child(1) {
+        width: 100px;
+        span {
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          transition: all 0.3s;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--color-primary);
+          }
+
+          &.no-category {
+            &:hover {
+              color: var(--color-dark-light);
+            }
+          }
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        width: 100px;
+      }
+
+      .footer-item-label {
+        &::after {
+          content: ':';
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  .action {
+    min-width: 220px;
+    width: 220px;
+  }
+}
