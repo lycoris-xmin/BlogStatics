@@ -139,6 +139,8 @@ $(function () {
     await getTalkList();
 
     window.lycoris.loading.hide();
+
+    window.lycoris.record('瞬间');
   };
 
   this.init();

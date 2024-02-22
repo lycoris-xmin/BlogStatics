@@ -1989,4 +1989,6 @@ $(async function () {
   setupCanvases();
 
   window.lycoris.loading.hide();
+
+  window.lycoris.record('仿切水果小游戏');
 });

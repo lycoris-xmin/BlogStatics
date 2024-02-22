@@ -177,6 +177,14 @@ $(function () {
         if (`${consolePath}/dashboard` != location.pathname) {
           location.href = location.pathname.replace(window.lycoris.console, consolePath);
         }
+      },
+      element: {
+        update(el, callback) {
+          const dom = $(el);
+          if (dom && dom.length && callback && typeof callback == 'function') {
+            callback.call(dom);
+          }
+        }
       }
     };
   }

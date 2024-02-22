@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --left-width: 950px;
 }
@@ -551,38 +550,75 @@
 }
 
 .main-container .post-inve .left .reward {
-  text-align: center;
-  vertical-align: middle;
-  padding-right: 12px;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  align-items: center;
+  border: 1px solid var(--color-secondary);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .main-container .post-inve .left .reward > span {
-  display: block;
-  height: 35px;
-  width: 35px;
   font-size: 20px;
-  border-radius: 50%;
-  border: 1px solid var(--color-secondary);
-  cursor: pointer;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
 }
 
-.main-container .post-inve .left .reward > span:hover {
+.main-container .post-inve .left .reward:hover {
   border-color: var(--color-danger);
   background-color: var(--color-danger);
   color: #fff;
 }
 
 .main-container .post-inve .left .tags {
-  max-width: 400px;
+  padding-left: 10px;
+  max-width: 500px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+}
+
+@media (max-width: 1920px) {
+  .main-container .post-inve .left .tags {
+    max-width: 400px;
+  }
+}
+
+.main-container .post-inve .left .tags span {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-container .post-inve .left .tags span::before {
+  content: '#';
+  padding-right: 2px;
 }
 
 .main-container .post-inve .left .tags span::after {
-  content: '，';
-  padding: 0 2px;
+  content: ',';
+  padding-right: 2px;
+}
+
+.main-container .post-inve .left .tags span:hover {
+  color: var(--color-danger);
+}
+
+.main-container .post-inve .left .tags span:last-child::after {
+  content: '';
+  padding: 0;
 }
 
 .main-container .post-inve .right {
@@ -591,11 +627,15 @@
 
 .main-container .post-inve .right .mdi {
   font-size: 14px;
+  margin-right: 5px;
+}
+
+.main-container .post-inve .right .mdi.mdi-heart {
+  color: var(--color-danger);
 }
 
 .main-container .post-inve .right .mdi-camera-timer {
   margin-left: 15px;
-  margin-right: 5px;
 }
 
 .main-container .prev-next {

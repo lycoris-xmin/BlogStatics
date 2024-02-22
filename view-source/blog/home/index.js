@@ -377,6 +377,8 @@ $(function () {
     } finally {
       window.lycoris.loading.hide();
     }
+
+    window.lycoris.record('首页');
   };
 
   this.init();

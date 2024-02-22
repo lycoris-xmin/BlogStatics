@@ -58,6 +58,8 @@ $(function () {
     createNavGroup(list);
 
     window.lycoris.loading.hide();
+
+    window.lycoris.record('收录');
   };
 
   this.init();

@@ -240,6 +240,8 @@ $(function () {
         }
       });
     }, 10);
+
+    window.lycoris.record('关于本站');
   };
 
   this.init();

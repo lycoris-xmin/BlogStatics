@@ -6,6 +6,5 @@
   "printWidth": 220,
   "trailingComma": "none",
   "bracketSpacing": true,
-  "arrowParens": "avoid",
-  "proseWrap": "preserve"
+  "arrowParens": "avoid"
 }

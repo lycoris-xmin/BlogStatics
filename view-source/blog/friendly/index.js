@@ -152,6 +152,8 @@ $(function () {
     await getFriendList();
 
     window.lycoris.loading.hide();
+
+    window.lycoris.record('友情链接');
   };
 
   this.init();

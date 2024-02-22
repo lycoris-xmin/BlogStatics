@@ -313,6 +313,10 @@ $(function () {
       }
     });
 
+    $('div.info').find('select[name="sex"]').bootstrapSelectpicker().set(info.sex);
+    $('div.info').find('select[name="educational"]').bootstrapSelectpicker().set(info.educational);
+    $('div.info').find('select[name="institutions"]').bootstrapSelectpicker().set(info.institutions);
+
     const skill = await getAboutSettings('skill');
 
     for (let type in skill) {
@@ -392,6 +396,9 @@ $(function () {
       const res = await request.post();
       if (res && res.resCode == 0) {
         window.lycoris.totast.success('保存成功');
+        window.lycoris.element.update('.dropdown-profile>a>span', function () {
+          $(this).text(brief.nickName);
+        });
       }
     } finally {
       bodyBusy.hide();

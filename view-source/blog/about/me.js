@@ -270,6 +270,40 @@ $(function () {
     }
   }
 
+  async function record(pageName) {
+    const data = {
+      clientOrign: clientOrign,
+      route: `${location.pathname}${location.search}`,
+      pageName: pageName,
+      referer: document.referrer,
+      isPost: false
+    };
+
+    const result = await db.query(tmp => {
+      return tmp.route == data.route;
+    });
+
+    if (result && result.length && result[0].time + 300000 > +new Date()) {
+      return;
+    }
+
+    try {
+      const request = $.createHttpRequest();
+      request.url = '/home/browse/record';
+      request.data = data;
+      await request.post();
+
+      if (result && result.length) {
+        result[0].time = +new Date();
+        db.update(result[0]);
+      } else {
+        db.create({ route: data.route, time: +new Date() });
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   this.init = function () {
     getInfo();
 
@@ -282,6 +316,8 @@ $(function () {
     getContact();
 
     getLink();
+
+    record('关于我');
   };
 
   this.init();

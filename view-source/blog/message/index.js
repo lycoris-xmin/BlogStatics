@@ -689,6 +689,8 @@ $(function () {
     window.lycoris.loading.hide();
 
     await getMessageList(true);
+
+    window.lycoris.record('留言');
   };
 
   this.init();

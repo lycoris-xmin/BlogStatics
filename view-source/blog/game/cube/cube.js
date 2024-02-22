@@ -3305,4 +3305,6 @@ $(function () {
   window.game = new Game();
 
   window.lycoris.loading.hide();
+
+  window.lycoris.record('魔方小游戏');
 });
