@@ -74,6 +74,13 @@
   margin: 15px auto;
 }
 
+.cherry-markdown-container .cherry .cherry-markdown :not(pre) code {
+  margin: 0 5px;
+  padding: 5px !important;
+  color: #fff;
+  background-color: var(--color-danger);
+}
+
 .cherry-markdown-container .cherry .cherry-markdown div[data-type='codeBlock'] > pre code[class*='language-'] .code-line {
   padding-left: 2em !important;
 }
@@ -158,12 +165,11 @@
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h3 {
-  color: #6d6c6c;
-  background: #d1edc4;
-  padding: 15px 20px 15px 10px;
-  font-weight: normal;
-  font-size: 16px;
-  border-radius: 5px;
+  margin-top: 16px !important;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  padding: 20px 5px;
   word-wrap: break-word;
   word-break: break-all;
   overflow: hidden;
@@ -175,25 +181,25 @@
   color: var(--color-danger) !important;
 }
 
-.cherry-markdown-container .cherry .cherry-markdown h4 {
-  background-color: #c8e6fb !important;
-  padding: 15px;
+.cherry-markdown-container .cherry .cherry-markdown h4,
+.cherry-markdown-container .cherry .cherry-markdown h5,
+.cherry-markdown-container .cherry .cherry-markdown h6 {
+  padding: 10px;
   border-radius: 5px;
   font-weight: 600;
+}
+
+.cherry-markdown-container .cherry .cherry-markdown h4 {
+  background-color: #c8e6fb !important;
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h5 {
   background-color: #fff6b5 !important;
-  padding: 15px;
-  border-radius: 5px;
-  font-weight: 600;
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h6 {
   background-color: var(--color-danger) !important;
-  padding: 15px;
-  border-radius: 5px;
-  font-weight: 600;
+  color: #fff;
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h4 > strong,
@@ -202,6 +208,21 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+}
+
+.cherry-markdown-container .cherry .cherry-markdown h1 code,
+.cherry-markdown-container .cherry .cherry-markdown h2 code,
+.cherry-markdown-container .cherry .cherry-markdown h3 code,
+.cherry-markdown-container .cherry .cherry-markdown h4 code,
+.cherry-markdown-container .cherry .cherry-markdown h5 code,
+.cherry-markdown-container .cherry .cherry-markdown h6 code {
+  margin: 5px;
+  padding: 2px 5px !important;
+}
+
+.cherry-markdown-container .cherry .cherry-markdown h6 code {
+  color: #fff !important;
+  background-color: #18c73e !important;
 }
 
 .cherry-markdown-container .cherry .cherry-table {

@@ -216,6 +216,7 @@ $(function () {
   });
 
   modal.createorupdate.handleShow(() => {
+    debugger;
     if (model.groups && model.groups.length) {
       selectpicker.setOptions(model.groups);
     }
@@ -254,7 +255,7 @@ $(function () {
     if (model.index > -1) {
       json.id = model.row.id;
     }
-
+    debugger;
     $(this).setBusy();
     try {
       const request = window.lycoris.createRequest();

@@ -221,7 +221,9 @@
   width: var(--page-header-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: var(--left-width) 1fr;
+  grid-template-columns: var(--left-width) -webkit-calc(var(--page-header-width) - var(--left-width));
+  grid-template-columns: var(--left-width) -moz-calc(var(--page-header-width) - var(--left-width));
+  grid-template-columns: var(--left-width) calc(var(--page-header-width) - var(--left-width));
 
   .card {
     border-radius: 15px;
@@ -1029,6 +1031,10 @@
           -webkit-transition: all 0.4s;
           -moz-transition: all 0.4s;
           transition: all 0.4s;
+          overflow: hidden;
+          white-space: nowrap;
+          word-break: break-all;
+          text-overflow: ellipsis;
 
           &.first {
             &::before {

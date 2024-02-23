@@ -15,10 +15,11 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: var(--feature-height);
-  grid-gap: 25px;
 
   > div {
     &:first-child {
+      padding-right: 12px;
+
       > .card {
         position: relative;
         height: 250px;
@@ -129,6 +130,7 @@
     }
 
     &.card {
+      margin-left: 12px;
       position: relative;
       padding: 0;
       overflow: hidden;
@@ -782,10 +784,10 @@
         }
       }
 
-      --icon-width: 400px;
+      --icon-width: 350px;
 
       @media (max-width: 1920px) {
-        --icon-width: 320px;
+        --icon-width: 300px;
       }
 
       .icon {

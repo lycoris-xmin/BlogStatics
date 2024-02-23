@@ -53,10 +53,10 @@
           color: var(--color-danger);
         }
       }
-    }
 
-    .cherry-previewer.cherry-preview--full {
-      overflow-x: hidden;
+      &.cherry-preview--full {
+        overflow-x: hidden;
+      }
     }
 
     .cherry-markdown {
@@ -77,6 +77,15 @@
       blockquote,
       table {
         margin: 15px auto;
+      }
+
+      :not(pre) {
+        code {
+          margin: 0 5px;
+          padding: 5px !important;
+          color: #fff;
+          background-color: var(--color-danger);
+        }
       }
 
       div[data-type='codeBlock'] {
@@ -167,42 +176,41 @@
       }
 
       h3 {
-        color: #6d6c6c;
-        background: #d1edc4;
-        padding: 15px 20px 15px 10px;
-        font-weight: normal;
-        font-size: 16px;
-        border-radius: 5px;
+        margin-top: 16px !important;
+        font-size: 18px;
+        color: #000;
+        font-weight: 600;
+        padding: 20px 5px;
         word-wrap: break-word;
         word-break: break-all;
         overflow: hidden;
+
+        &:before {
+          content: '$';
+          margin-right: 8px;
+          color: var(--color-danger) !important;
+        }
       }
 
-      h3:before {
-        content: '$';
-        margin-right: 8px;
-        color: var(--color-danger) !important;
+      h4,
+      h5,
+      h6 {
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 600;
       }
 
       h4 {
         background-color: #c8e6fb !important;
-        padding: 15px;
-        border-radius: 5px;
-        font-weight: 600;
       }
 
       h5 {
         background-color: #fff6b5 !important;
-        padding: 15px;
-        border-radius: 5px;
-        font-weight: 600;
       }
 
       h6 {
         background-color: var(--color-danger) !important;
-        padding: 15px;
-        border-radius: 5px;
-        font-weight: 600;
+        color: #fff;
       }
 
       h4 > strong,
@@ -211,6 +219,25 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        code {
+          margin: 5px;
+          padding: 2px 5px !important;
+        }
+      }
+
+      h6 {
+        code {
+          color: #fff !important;
+          background-color: #18c73e !important;
+        }
       }
     }
 

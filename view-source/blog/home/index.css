@@ -14,7 +14,10 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: var(--feature-height);
-  grid-gap: 25px;
+}
+
+.feature > div:first-child {
+  padding-right: 12px;
 }
 
 .feature > div:first-child > .card {
@@ -126,6 +129,7 @@
 }
 
 .feature > div.card {
+  margin-left: 12px;
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -739,7 +743,7 @@
   -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   -moz-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  --icon-width: 400px;
+  --icon-width: 350px;
 }
 
 .post-list ul > li:nth-child(even) {
@@ -833,7 +837,7 @@
 
 @media (max-width: 1920px) {
   .post-list ul > li {
-    --icon-width: 320px;
+    --icon-width: 300px;
   }
 }
 

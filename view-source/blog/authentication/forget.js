@@ -21,6 +21,8 @@ $(function () {
   });
 
   $('button[captcha]').on('click', async function () {
+    window.lycoris.totast.warn('重构版本测试中，该功能还未开发');
+    return;
     const email = $('input[name="email"]').val();
     if (!email) {
       window.lycoris.totast.warn('邮箱不能为空');
@@ -79,20 +81,20 @@ $(function () {
     }, 1000);
   }
 
-  $('button[home]').on('click', function () {
-    location.href = '/';
-  });
-
   $('button[login]').on('click', function () {
     location.href = `/authentication/login${location.search}`;
   });
 
-  $('button[forget]').on('click', function () {
-    location.href = `/authentication/forget${location.search}`;
+  $('button[home]').on('click', function () {
+    location.href = '/';
   });
 
   $('button[register]').on('click', function () {
-    loginHanlder.call(this);
+    location.href = `/authentication/register${location.search}`;
+  });
+
+  $('button[forget]').on('click', function () {
+    window.lycoris.totast.warn('重构版本测试中，该功能还未开发');
   });
 
   icons.on('click', function () {
@@ -199,7 +201,7 @@ $(function () {
     $('.line-loading-preloader').removeClass('show-loading').remove();
 
     window.onload = function () {
-      const time = sessionStorage.getItem('captchaTimer');
+      const time = sessionStorage.getItem('forget-captchaTimer');
       if (time == null) {
         return;
       }
@@ -207,7 +209,7 @@ $(function () {
       if (time > 0) {
         captchaTimer(time);
       } else {
-        sessionStorage.removeItem('captchaTimer');
+        sessionStorage.removeItem('forget-captchaTimer');
       }
     };
   };

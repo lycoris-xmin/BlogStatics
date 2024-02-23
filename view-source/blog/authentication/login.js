@@ -9,10 +9,6 @@ $(function () {
     redirect: '/'
   };
 
-  $('button[register]').on('click', function () {
-    location.href = `/authentication/register${location.search}`;
-  });
-
   $('button[login]').on('click', async function () {
     // 登录操作
     const form = $(this).parent();
@@ -57,6 +53,14 @@ $(function () {
 
   $('button[home]').on('click', function () {
     location.href = '/';
+  });
+
+  $('button[register]').on('click', function () {
+    location.href = `/authentication/register${location.search}`;
+  });
+
+  $('button[forget]').on('click', function () {
+    location.href = `/authentication/forget${location.search}`;
   });
 
   icons.on('click', function () {

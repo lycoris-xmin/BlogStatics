@@ -22,7 +22,9 @@ $(function () {
     selectpicker.localBackup.enable();
     selectpicker.loadFileSrc.enable();
 
-    if (val == 10) {
+    if (val == 5) {
+      dom.find('div.channel.gitee').slideDown(300).addClass('active');
+    } else if (val == 10) {
       dom.find('div.channel.github').slideDown(300).addClass('active');
     } else if (val == 20) {
       dom.find('div.channel.minio').slideDown(300).addClass('active');
@@ -43,6 +45,7 @@ $(function () {
     try {
       const form = dom.find('form');
       const json = form.find('div.basic').toJson();
+      json.gitee = form.find('div.gitee').toJson();
       json.github = form.find('div.github').toJson();
       json.monio = form.find('div.minio').toJson();
 
@@ -64,6 +67,9 @@ $(function () {
       selectpicker.uploadChannel.set(data.uploadChannel.toString());
       selectpicker.localBackup.set(data.localBackup.toString());
       selectpicker.loadFileSrc.set(data.loadFileSrc.toString());
+
+      const gitee = dom.find('div.channel.gitee');
+      gitee.formAutoFill(data.gitee);
 
       const github = dom.find('div.channel.github');
       github.formAutoFill(data.github);
