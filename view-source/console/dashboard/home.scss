@@ -392,6 +392,8 @@
   li {
     span {
       &:first-child {
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
         max-width: 800px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -446,6 +448,11 @@
       object-fit: fill;
       margin-right: 5px;
     }
+
+    .mdi {
+      font-size: 18px;
+      margin: 0 3px;
+    }
   }
 }
 
@@ -491,12 +498,5 @@
     list-style: none;
     font-size: 16px;
     padding: 5px;
-
-    span {
-      &:first-child {
-        -webkit-flex-shrink: 0;
-        flex-shrink: 0;
-      }
-    }
   }
 }

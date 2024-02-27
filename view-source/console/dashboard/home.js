@@ -241,7 +241,7 @@ $(function () {
   function createWorldMapHtml(list) {
     let html = '';
     for (let item of list) {
-      html += html.concat(`
+      html = html.concat(`
       <li class="flex-between-center">
         <div>
           <img src="/statics/flags/${item.flag}.png" />
@@ -468,12 +468,17 @@ $(function () {
 
     selector = selector.toLocaleLowerCase();
 
+    let iconPath = selector == 'browseclient' ? 'browser' : selector == 'os' ? 'os' : 'device';
+    let mdiIcon = selector == 'browseclient' ? 'mdi-web' : selector == 'os' ? 'mdi-hexagon-multiple' : 'mdi-devices';
+
     let html = '';
     for (let item of list) {
+      let img = item.icon ? `<img src="/statics/icon/${iconPath}/${item.icon}" />` : `<span class="mdi ${mdiIcon}"></span>`;
+
       html = html.concat(`
       <li class="flex-between-center">
         <div>
-          <img src="/statics/icon/${selector == 'browseclient' ? 'browser' : selector == 'os' ? 'os' : 'device'}/${item.icon}" />
+          ${img}
           <span>${item.name}</span>
         </div>
         <span>${item.count}</span>

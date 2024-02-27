@@ -374,6 +374,8 @@
 }
 
 .domain-statistics li span:first-child {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
   max-width: 800px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -423,6 +425,11 @@
   margin-right: 5px;
 }
 
+.other-statistics li .mdi {
+  font-size: 18px;
+  margin: 0 3px;
+}
+
 .domain-statistics,
 .other-statistics {
   display: -webkit-flex;
@@ -470,10 +477,4 @@
   list-style: none;
   font-size: 16px;
   padding: 5px;
-}
-
-.domain-statistics li span:first-child,
-.other-statistics li span:first-child {
-  -webkit-flex-shrink: 0;
-  flex-shrink: 0;
 }
