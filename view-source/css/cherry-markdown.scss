@@ -70,6 +70,40 @@
         -moz-transition: color 0.35s;
         transition: color 0.35s;
         cursor: default;
+
+        code {
+          margin: 0 5px;
+          padding: 5px !important;
+          color: #fff;
+          background-color: var(--color-danger);
+        }
+      }
+
+      h1 {
+        line-height: 40px;
+      }
+
+      h2 {
+        line-height: 32px;
+      }
+
+      h3 {
+        line-height: 28px;
+      }
+
+      h4,
+      h5,
+      h6 {
+        line-height: 26px;
+      }
+
+      p {
+        code {
+          margin: 0 5px;
+          padding: 2px 4px !important;
+          color: #fff;
+          background-color: var(--color-danger);
+        }
       }
 
       p,
@@ -77,15 +111,6 @@
       blockquote,
       table {
         margin: 15px auto;
-      }
-
-      :not(pre) {
-        code {
-          margin: 0 5px;
-          padding: 5px !important;
-          color: #fff;
-          background-color: var(--color-danger);
-        }
       }
 
       div[data-type='codeBlock'] {
@@ -236,7 +261,7 @@
       h6 {
         code {
           color: #fff !important;
-          background-color: #18c73e !important;
+          background-color: rgba(118, 61, 229, 0.7) !important;
         }
       }
     }

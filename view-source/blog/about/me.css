@@ -429,6 +429,10 @@ nav li a {
   max-width: 600px;
 }
 
+.section.info .row p[tags] {
+  line-height: 42px;
+}
+
 .section.info .row p[tags] span {
   padding: 5px 8px;
   border-radius: 5px;

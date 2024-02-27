@@ -2,7 +2,7 @@ $(function () {
   $.createHttpRequest = function () {
     const that = this;
     const _supportFetch = typeof window.fetch === 'function';
-    const _baseUrl = `${window.lycoris ? window.lycoris.console || '' : ''}/`;
+    let _baseUrl = `${window.lycoris ? window.lycoris.console || '' : ''}/`;
 
     this.url = '';
     this.timeout = 60000;
@@ -10,10 +10,14 @@ $(function () {
     this.data = {};
     this.formData = void 0;
 
+    this.setBaseUrl = url => {
+      _baseUrl = url || '';
+    };
+
     this.get = function () {
       return new Promise((resolve, reject) => {
         let option = {
-          url: `${_baseUrl}${that.url.startsWith('/') ? that.url.replace('/', '') : that.url}`,
+          url: _getUrl(),
           type: 'GET'
         };
 
@@ -36,7 +40,7 @@ $(function () {
     this.post = function (files) {
       return new Promise((resolve, reject) => {
         let option = {
-          url: `${_baseUrl}${that.url.startsWith('/') ? that.url.replace('/', '') : that.url}`,
+          url: _getUrl(),
           type: 'POST'
         };
 
@@ -108,6 +112,15 @@ $(function () {
         }
       }
     };
+
+    function _getUrl() {
+      const url = `${_baseUrl}${that.url.startsWith('/') ? that.url.replace('/', '') : that.url}`;
+      if (url.startsWith('/')) {
+        return url;
+      }
+
+      return `/${url}`;
+    }
 
     function _request() {
       if (_supportFetch) {

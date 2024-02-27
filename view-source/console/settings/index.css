@@ -349,6 +349,7 @@ form.email button[test] span.mdi {
   margin-right: 5px;
 }
 
+form.staticfile .gitee,
 form.staticfile .github,
 form.staticfile .minio,
 form.staticfile .aliyun,
