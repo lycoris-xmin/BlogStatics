@@ -10,6 +10,15 @@ $(function () {
     y: 0
   };
 
+  let clientOrign = localStorage.getItem('clientOrign');
+
+  if (!clientOrign) {
+    clientOrign = $.uuid();
+    localStorage.setItem('clientOrign', clientOrign);
+  }
+
+  const db = $.indexDb('lycoris-blog', 'blog');
+
   menus.on('click', function (e) {
     if (scrolling) {
       return;
@@ -160,7 +169,6 @@ $(function () {
   async function getInfo() {
     try {
       const info = await getAboutSettings('info');
-      console.log(info);
       if (info) {
         for (let key in info) {
           const p = $('#info').find(`p[${key}]`);

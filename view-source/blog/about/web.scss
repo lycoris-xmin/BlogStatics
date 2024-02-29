@@ -1,6 +1,10 @@
 .container {
   --body-right-width: 350px;
 
+  @media (max-width: 1600px) {
+    --body-right-width: 300px;
+  }
+
   > .body {
     display: grid;
     grid-template-columns: 1fr var(--body-right-width);

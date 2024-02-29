@@ -163,7 +163,6 @@
 
 .web-statistics .statistics .percent span::after {
   display: inline-block;
-  content: '%';
   padding: 0 5px;
 }
 
@@ -177,33 +176,46 @@
   line-height: 24px;
 }
 
-.web-statistics .statistics .percent.up {
+.web-statistics .statistics[pv] .percent span::after, .web-statistics .statistics[uv] .percent span::after, .web-statistics .statistics[interactive] .percent span::after {
+  content: '%';
+}
+
+.web-statistics .statistics[pv] .percent.up, .web-statistics .statistics[uv] .percent.up, .web-statistics .statistics[interactive] .percent.up {
   color: var(--color-danger);
 }
 
-.web-statistics .statistics .percent.up span::before {
+.web-statistics .statistics[pv] .percent.up span::before, .web-statistics .statistics[uv] .percent.up span::before, .web-statistics .statistics[interactive] .percent.up span::before {
   content: '+';
   padding-right: 5px;
 }
 
-.web-statistics .statistics .percent.down {
+.web-statistics .statistics[pv] .percent.down, .web-statistics .statistics[uv] .percent.down, .web-statistics .statistics[interactive] .percent.down {
   color: var(--color-success);
 }
 
-.web-statistics .statistics .percent.down span::before {
+.web-statistics .statistics[pv] .percent.down span::before, .web-statistics .statistics[uv] .percent.down span::before, .web-statistics .statistics[interactive] .percent.down span::before {
   content: '-';
+}
+
+.web-statistics .statistics[elapsed-milliseconds] .percent span::after {
+  content: 'ms';
 }
 
 .web-statistics .statistics[elapsed-milliseconds] .percent.up {
   color: var(--color-success);
 }
 
+.web-statistics .statistics[elapsed-milliseconds] .percent.up span::before {
+  content: '-';
+  padding-right: 5px;
+}
+
 .web-statistics .statistics[elapsed-milliseconds] .percent.down {
   color: var(--color-danger);
 }
 
-.web-statistics .statistics[elapsed-milliseconds] .percent span::after {
-  content: 'ms';
+.web-statistics .statistics[elapsed-milliseconds] .percent.down span::before {
+  content: '+';
 }
 
 .web-statistics .statistics .loading {
@@ -331,11 +343,11 @@
 
 .world-map-panel .world-map li .progress-bar {
   margin-left: 5px;
-  border-left: 2px solid var(--color-info-light);
+  border-left: 2px solid rgba(72, 176, 247, 0.35);
   display: inline-block;
   height: 32px;
   width: 80px;
-  background-color: var(--color-info-light);
+  background-color: rgba(72, 176, 247, 0.35);
 }
 
 .world-map-panel .world-map li .progress-bar div {

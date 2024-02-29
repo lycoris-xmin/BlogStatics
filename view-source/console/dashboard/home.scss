@@ -165,7 +165,6 @@
 
         &::after {
           display: inline-block;
-          content: '%';
           padding: 0 5px;
         }
       }
@@ -179,24 +178,36 @@
         cursor: pointer;
         line-height: 24px;
       }
+    }
 
-      &.up {
-        color: var(--color-danger);
-
+    &[pv],
+    &[uv],
+    &[interactive] {
+      .percent {
         span {
-          &::before {
-            content: '+';
-            padding-right: 5px;
+          &::after {
+            content: '%';
           }
         }
-      }
 
-      &.down {
-        color: var(--color-success);
+        &.up {
+          color: var(--color-danger);
 
-        span {
-          &::before {
-            content: '-';
+          span {
+            &::before {
+              content: '+';
+              padding-right: 5px;
+            }
+          }
+        }
+
+        &.down {
+          color: var(--color-success);
+
+          span {
+            &::before {
+              content: '-';
+            }
           }
         }
       }
@@ -204,17 +215,30 @@
 
     &[elapsed-milliseconds] {
       .percent {
+        span {
+          &::after {
+            content: 'ms';
+          }
+        }
+
         &.up {
           color: var(--color-success);
+
+          span {
+            &::before {
+              content: '-';
+              padding-right: 5px;
+            }
+          }
         }
 
         &.down {
           color: var(--color-danger);
-        }
 
-        span {
-          &::after {
-            content: 'ms';
+          span {
+            &::before {
+              content: '+';
+            }
           }
         }
       }
@@ -345,11 +369,11 @@
 
       .progress-bar {
         margin-left: 5px;
-        border-left: 2px solid var(--color-info-light);
+        border-left: 2px solid rgba(72, 176, 247, 0.35);
         display: inline-block;
         height: 32px;
         width: 80px;
-        background-color: var(--color-info-light);
+        background-color: rgba(72, 176, 247, 0.35);
 
         div {
           height: 100%;

@@ -70,22 +70,15 @@ $(function () {
       return;
     }
 
-    let html = `<span data-number="${value}">0</span>`;
-    if (!second) {
-      if (value > 0) {
-        html = html.concat('<i class="mdi mdi-arrow-up-thick"></i>');
-      } else if (value < 0) {
-        html = html.concat('<i class="mdi mdi-arrow-down-thick"></i>');
-      }
-    } else {
-      if (value < 0) {
-        html = html.concat('<i class="mdi mdi-arrow-up-thick"></i>');
-      } else if (value > 0) {
-        html = html.concat('<i class="mdi mdi-arrow-down-thick"></i>');
-      }
+    let html = `<span data-number="${Math.abs(value)}">0</span>`;
+    if (value > 0) {
+      html = html.concat('<i class="mdi mdi-arrow-up-thick"></i>');
+    } else if (value < 0) {
+      html = html.concat('<i class="mdi mdi-arrow-down-thick"></i>');
     }
 
     percentEl.html(html);
+
     percentEl.addClass(value > 0 ? 'up' : value < 0 ? 'down' : '');
   }
 
@@ -474,6 +467,10 @@ $(function () {
     let html = '';
     for (let item of list) {
       let img = item.icon ? `<img src="/statics/icon/${iconPath}/${item.icon}" />` : `<span class="mdi ${mdiIcon}"></span>`;
+
+      if (!item.name) {
+        item.name = selector == 'browseclient' ? '未知浏览器' : selector == 'os' ? '未知系统' : '未知设备';
+      }
 
       html = html.concat(`
       <li class="flex-between-center">

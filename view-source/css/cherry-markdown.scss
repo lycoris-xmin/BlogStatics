@@ -70,39 +70,25 @@
         -moz-transition: color 0.35s;
         transition: color 0.35s;
         cursor: default;
-
-        code {
-          margin: 0 5px;
-          padding: 5px !important;
-          color: #fff;
-          background-color: var(--color-danger);
-        }
       }
 
-      h1 {
-        line-height: 40px;
-      }
-
-      h2 {
-        line-height: 32px;
-      }
-
-      h3 {
-        line-height: 28px;
-      }
-
+      h1,
+      h2,
+      h3,
       h4,
       h5,
-      h6 {
-        line-height: 26px;
-      }
-
+      h6,
       p {
         code {
           margin: 0 5px;
-          padding: 2px 4px !important;
+          padding: 5px 8px !important;
           color: #fff;
-          background-color: var(--color-danger);
+          background-color: #585759 !important;
+
+          @media (max-width: 1600px) {
+            border-radius: 0.2em;
+            font-size: 16px;
+          }
         }
       }
 
@@ -171,41 +157,56 @@
         color: #926dde;
       }
 
+      a[href],
+      a[data-nav-link] {
+        cursor: pointer;
+      }
+
       h1 {
-        padding: 25px 0;
         margin: 0;
-        border-radius: 5px;
-      }
+        padding: 25px 0 5px 0;
+        line-height: 40px;
 
-      h1:before {
-        content: '[';
-        margin-right: 8px;
-        color: var(--color-danger) !important;
-      }
+        @media (max-width: 1600px) {
+          font-size: 1.5em;
+        }
 
-      h1:after {
-        content: ']';
-        margin-left: 8px;
-        color: var(--color-danger) !important;
+        &:before {
+          content: '[';
+          margin-right: 8px;
+          color: var(--color-danger) !important;
+        }
+
+        &:after {
+          content: ']';
+          margin-left: 8px;
+          color: var(--color-danger) !important;
+        }
       }
 
       h2 {
-        padding: 20px 0;
         margin: 0;
-      }
+        line-height: 32px;
+        padding: 25px 0 5px 0;
 
-      h2:before {
-        content: '#';
-        margin-right: 8px;
-        color: var(--color-danger) !important;
+        @media (max-width: 1600px) {
+          font-size: 1.5em;
+        }
+
+        &:before {
+          content: '#';
+          margin-right: 8px;
+          color: var(--color-danger) !important;
+        }
       }
 
       h3 {
-        margin-top: 16px !important;
+        margin: 0;
         font-size: 18px;
         color: #000;
         font-weight: 600;
-        padding: 20px 5px;
+        padding: 15px 0 5px 0;
+        line-height: 28px;
         word-wrap: break-word;
         word-break: break-all;
         overflow: hidden;
@@ -221,6 +222,7 @@
       h5,
       h6 {
         padding: 10px;
+        line-height: 26px;
         border-radius: 5px;
         font-weight: 600;
       }
@@ -244,25 +246,6 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        code {
-          margin: 5px;
-          padding: 2px 5px !important;
-        }
-      }
-
-      h6 {
-        code {
-          color: #fff !important;
-          background-color: rgba(118, 61, 229, 0.7) !important;
-        }
       }
     }
 

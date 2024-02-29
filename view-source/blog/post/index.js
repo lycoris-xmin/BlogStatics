@@ -72,6 +72,11 @@ $(function () {
       };
 
       doms.cherry = new Cherry(option);
+
+      setTimeout(() => {
+        debugger;
+        window.lycoris.navlink($('#cherry-markdown-container').find('a[href]'), '_blank');
+      }, 100);
     } catch (error) {
       //
     } finally {

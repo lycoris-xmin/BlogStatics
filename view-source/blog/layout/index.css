@@ -101,6 +101,12 @@ body:has(.search-overlay-show) {
   }
 }
 
+@media (max-width: 1600px) {
+  :root {
+    --page-header-width: 1000px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 8px;
@@ -664,6 +670,12 @@ body:has(.search-overlay-show) {
   margin-bottom: 28px;
 }
 
+@media (max-width: 1600px) {
+  .page-body .container > .header-title {
+    margin-bottom: 10px;
+  }
+}
+
 .page-body .container > .header-title > .flex-start-center {
   height: 100%;
   padding: 0 15px;
@@ -678,9 +690,21 @@ body:has(.search-overlay-show) {
   cursor: default;
 }
 
+@media (max-width: 1600px) {
+  .page-body .container > .header-title > .flex-start-center p {
+    font-size: 24px;
+  }
+}
+
 .page-body .container > .header-title > .flex-start-center p .mdi {
   font-size: 28px;
   margin-right: 5px;
+}
+
+@media (max-width: 1600px) {
+  .page-body .container > .header-title > .flex-start-center p .mdi {
+    font-size: 20px;
+  }
 }
 
 .page-body .container > .header-title > .flex-start-center p.focus-in {

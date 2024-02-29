@@ -72,36 +72,25 @@
 .cherry-markdown-container .cherry .cherry-markdown h3 code,
 .cherry-markdown-container .cherry .cherry-markdown h4 code,
 .cherry-markdown-container .cherry .cherry-markdown h5 code,
-.cherry-markdown-container .cherry .cherry-markdown h6 code {
-  margin: 0 5px;
-  padding: 5px !important;
-  color: #fff;
-  background-color: var(--color-danger);
-}
-
-.cherry-markdown-container .cherry .cherry-markdown h1 {
-  line-height: 40px;
-}
-
-.cherry-markdown-container .cherry .cherry-markdown h2 {
-  line-height: 32px;
-}
-
-.cherry-markdown-container .cherry .cherry-markdown h3 {
-  line-height: 28px;
-}
-
-.cherry-markdown-container .cherry .cherry-markdown h4,
-.cherry-markdown-container .cherry .cherry-markdown h5,
-.cherry-markdown-container .cherry .cherry-markdown h6 {
-  line-height: 26px;
-}
-
+.cherry-markdown-container .cherry .cherry-markdown h6 code,
 .cherry-markdown-container .cherry .cherry-markdown p code {
   margin: 0 5px;
-  padding: 2px 4px !important;
+  padding: 5px 8px !important;
   color: #fff;
-  background-color: var(--color-danger);
+  background-color: #585759 !important;
+}
+
+@media (max-width: 1600px) {
+  .cherry-markdown-container .cherry .cherry-markdown h1 code,
+  .cherry-markdown-container .cherry .cherry-markdown h2 code,
+  .cherry-markdown-container .cherry .cherry-markdown h3 code,
+  .cherry-markdown-container .cherry .cherry-markdown h4 code,
+  .cherry-markdown-container .cherry .cherry-markdown h5 code,
+  .cherry-markdown-container .cherry .cherry-markdown h6 code,
+  .cherry-markdown-container .cherry .cherry-markdown p code {
+    border-radius: 0.2em;
+    font-size: 16px;
+  }
 }
 
 .cherry-markdown-container .cherry .cherry-markdown p,
@@ -165,10 +154,21 @@
   color: #926dde;
 }
 
+.cherry-markdown-container .cherry .cherry-markdown a[href],
+.cherry-markdown-container .cherry .cherry-markdown a[data-nav-link] {
+  cursor: pointer;
+}
+
 .cherry-markdown-container .cherry .cherry-markdown h1 {
-  padding: 25px 0;
   margin: 0;
-  border-radius: 5px;
+  padding: 25px 0 5px 0;
+  line-height: 40px;
+}
+
+@media (max-width: 1600px) {
+  .cherry-markdown-container .cherry .cherry-markdown h1 {
+    font-size: 1.5em;
+  }
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h1:before {
@@ -184,8 +184,15 @@
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h2 {
-  padding: 20px 0;
   margin: 0;
+  line-height: 32px;
+  padding: 25px 0 5px 0;
+}
+
+@media (max-width: 1600px) {
+  .cherry-markdown-container .cherry .cherry-markdown h2 {
+    font-size: 1.5em;
+  }
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h2:before {
@@ -195,11 +202,12 @@
 }
 
 .cherry-markdown-container .cherry .cherry-markdown h3 {
-  margin-top: 16px !important;
+  margin: 0;
   font-size: 18px;
   color: #000;
   font-weight: 600;
-  padding: 20px 5px;
+  padding: 15px 0 5px 0;
+  line-height: 28px;
   word-wrap: break-word;
   word-break: break-all;
   overflow: hidden;
@@ -215,6 +223,7 @@
 .cherry-markdown-container .cherry .cherry-markdown h5,
 .cherry-markdown-container .cherry .cherry-markdown h6 {
   padding: 10px;
+  line-height: 26px;
   border-radius: 5px;
   font-weight: 600;
 }
@@ -238,21 +247,6 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-}
-
-.cherry-markdown-container .cherry .cherry-markdown h1 code,
-.cherry-markdown-container .cherry .cherry-markdown h2 code,
-.cherry-markdown-container .cherry .cherry-markdown h3 code,
-.cherry-markdown-container .cherry .cherry-markdown h4 code,
-.cherry-markdown-container .cherry .cherry-markdown h5 code,
-.cherry-markdown-container .cherry .cherry-markdown h6 code {
-  margin: 5px;
-  padding: 2px 5px !important;
-}
-
-.cherry-markdown-container .cherry .cherry-markdown h6 code {
-  color: #fff !important;
-  background-color: rgba(118, 61, 229, 0.7) !important;
 }
 
 .cherry-markdown-container .cherry .cherry-table {

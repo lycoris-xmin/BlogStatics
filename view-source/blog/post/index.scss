@@ -1,5 +1,9 @@
 :root {
   --left-width: 950px;
+
+  @media (max-width: 1600px) {
+    --left-width: 730px;
+  }
 }
 
 .post-header {
@@ -30,6 +34,10 @@
     -moz-box-orient: vertical;
     -moz-box-direction: normal;
     flex-direction: column;
+
+    @media (max-width: 1600px) {
+      height: 220px;
+    }
 
     h1 {
       position: relative;
@@ -460,76 +468,22 @@
     .post-inve {
       padding: 12px 10px;
     }
+  }
 
-    .copyright {
-      margin-top: 15px;
-      position: relative;
-      background: #2b2b2b;
-      padding: 10px 30px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 10px;
+  .copyright {
+    margin-top: 15px;
+    position: relative;
+    background: #2b2b2b;
+    padding: 10px 30px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 10px;
 
-      .copyright-body {
-        padding: 20px 0 10px 0;
-        cursor: default;
-        font-size: 16px;
-        font-weight: 500;
-
-        p.title {
-          text-align: center;
-          letter-spacing: 5.5px;
-          font-size: 20px;
-          font-weight: 500;
-        }
-
-        .content {
-          p {
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            line-height: 24px;
-
-            .height-light {
-              cursor: pointer;
-              -webkit-transition: color 0.3s ease-in-out;
-              -moz-transition: color 0.3s ease-in-out;
-              transition: color 0.3s ease-in-out;
-
-              &:hover {
-                color: var(--color-danger);
-              }
-            }
-          }
-        }
-
-        .notice {
-          padding-top: 20px;
-
-          p {
-            margin-bottom: 5px;
-
-            &:first-child {
-              span {
-                color: var(--color-danger);
-                -webkit-transition: color 0.3s ease-in-out;
-                -moz-transition: color 0.3s ease-in-out;
-                transition: color 0.3s ease-in-out;
-
-                &:hover {
-                  color: var(--color-success);
-                }
-              }
-            }
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-      }
+    @media (max-width: 1600px) {
+      margin: 0 10px;
     }
 
-    .copyright::before {
+    &::before {
       font-family: fantasy;
       content: '!';
       position: absolute;
@@ -545,7 +499,7 @@
       border-radius: 5px;
     }
 
-    .copyright::after {
+    &::after {
       content: '';
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
@@ -553,6 +507,78 @@
       position: absolute;
       top: -8px;
       left: 48%;
+    }
+
+    .copyright-body,
+    .content-body {
+      padding: 20px 0 10px 0;
+      cursor: default;
+      font-weight: 500;
+    }
+
+    .copyright-body {
+      .title {
+        text-align: center;
+        letter-spacing: 5.5px;
+        font-size: 20px;
+      }
+    }
+
+    .content-body {
+      .content {
+        font-size: 16px;
+
+        @media (max-width: 1960px) {
+          font-size: 14px;
+        }
+
+        p {
+          margin-bottom: 10px;
+          letter-spacing: 2px;
+          line-height: 24px;
+
+          @media (max-width: 1960px) {
+            line-height: 20px;
+            margin-bottom: 6px;
+          }
+
+          .height-light {
+            cursor: pointer;
+            -webkit-transition: color 0.3s ease-in-out;
+            -moz-transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: var(--color-danger);
+            }
+          }
+        }
+      }
+
+      .notice {
+        padding-top: 20px;
+
+        p {
+          margin-bottom: 5px;
+
+          &:first-child {
+            span {
+              color: var(--color-danger);
+              -webkit-transition: color 0.3s ease-in-out;
+              -moz-transition: color 0.3s ease-in-out;
+              transition: color 0.3s ease-in-out;
+
+              &:hover {
+                color: var(--color-success);
+              }
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 
@@ -599,6 +625,10 @@
 
         @media (max-width: 1920px) {
           max-width: 400px;
+        }
+
+        @media (max-width: 1600px) {
+          max-width: 350px;
         }
 
         span {
@@ -855,6 +885,10 @@
         -moz-animation: float 6s ease-in-out infinite;
         animation: float 6s ease-in-out infinite;
 
+        @media (max-width: 1600px) {
+          --avatar-size: 60px;
+        }
+
         img {
           height: var(--avatar-size);
           width: var(--avatar-size);
@@ -924,6 +958,10 @@
         padding: 10px 0;
         font-size: 26px;
         font-weight: 500;
+
+        @media (max-width: 1600px) {
+          font-size: 20px;
+        }
       }
 
       .links {
@@ -939,6 +977,11 @@
           -moz-transition: all 0.4s;
           transition: all 0.4s;
 
+          @media (max-width: 1600px) {
+            height: 35px;
+            width: 35px;
+          }
+
           &:hover {
             -webkit-transform: scale(1.2);
             -moz-transform: scale(1.2);
@@ -953,6 +996,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
+
+        @media (max-width: 1600px) {
+          grid-gap: 5px;
+        }
 
         > div {
           -webkit-flex-direction: column;
@@ -989,10 +1036,18 @@
           &:first-child {
             font-size: 24px;
             font-weight: 500;
+
+            @media (max-width: 1600px) {
+              font-size: 20px;
+            }
           }
 
           &:last-child {
             font-size: 16px;
+
+            @media (max-width: 1600px) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -1007,8 +1062,16 @@
         padding-bottom: 6px;
         margin-bottom: 10px;
 
+        @media (max-width: 1600px) {
+          font-size: 16px;
+        }
+
         .mdi {
           font-size: 18px;
+
+          @media (max-width: 1600px) {
+            font-size: 12px;
+          }
         }
 
         .el-icon {
@@ -1023,6 +1086,10 @@
       .topics {
         list-style: none;
         padding: 10px 10px;
+
+        @media (max-width: 1600px) {
+          font-size: 16px;
+        }
 
         li {
           margin-bottom: 8px;

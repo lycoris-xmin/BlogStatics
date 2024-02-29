@@ -292,8 +292,16 @@ nav {
 
   &.info {
     .section-body {
-      max-width: 800px;
+      max-width: 1400px;
       margin: 0 auto;
+
+      @media (max-width: 1920px) {
+        max-width: 1000px;
+      }
+
+      @media (max-width: 1600px) {
+        max-width: 800px;
+      }
 
       .flex-start-center {
         padding: 35px;
@@ -301,6 +309,10 @@ nav {
         -webkit-transition: all 0.5s ease-in-out;
         -moz-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
+
+        @media (max-width1600px) {
+          padding: 15px;
+        }
 
         &:hover {
           cursor: pointer;
@@ -346,6 +358,10 @@ nav {
         font-size: 24px;
         text-align: left;
 
+        @media (max-width: 1600px) {
+          font-size: 18px;
+        }
+
         &:first-child {
           -webkit-flex-shrink: 0;
           flex-shrink: 0;
@@ -370,6 +386,19 @@ nav {
             &:last-child {
               margin-right: 0;
             }
+          }
+        }
+
+        &[introduction] {
+          max-height: 620px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          line-height: 30px;
+
+          @media (max-width: 1600px) {
+            max-height: 350px;
+            line-height: 24px;
           }
         }
       }
@@ -446,6 +475,10 @@ nav {
 
         @media (max-height: 1080px) {
           max-height: 700px;
+        }
+
+        @media (max-height: 900px) {
+          max-height: 550px;
         }
       }
     }

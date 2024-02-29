@@ -2,6 +2,12 @@
   --body-right-width: 350px;
 }
 
+@media (max-width: 1600px) {
+  .container {
+    --body-right-width: 300px;
+  }
+}
+
 .container > .body {
   display: grid;
   grid-template-columns: 1fr var(--body-right-width);

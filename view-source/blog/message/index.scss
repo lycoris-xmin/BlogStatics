@@ -110,13 +110,23 @@
       -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       -moz-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+
+      @media (max-width: 1600px) {
+        font-size: 18px;
+      }
     }
   }
 
   .remind {
     padding: 0 10px;
+    line-height: 30px;
+
+    @media (max-width: 1600px) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
     li {
-      line-height: 30px;
       letter-spacing: 2px;
       -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       -moz-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -178,6 +188,10 @@
       height: 100%;
       border-radius: inherit;
       font-size: 18px;
+
+      @media (max-width: 1600px) {
+        font-size: 16px;
+      }
     }
 
     .limit {
@@ -381,9 +395,14 @@
     }
   }
 
-  .content {
+  > .content {
     line-height: 26px;
     letter-spacing: 2px;
+    padding: 5px 0;
+
+    p {
+      word-break: break-all;
+    }
 
     .violation {
       display: block;
@@ -392,19 +411,6 @@
       span {
         padding: 6px 10px;
       }
-    }
-  }
-
-  div {
-    &.content {
-      padding: 10px 0;
-      margin-bottom: 18px;
-    }
-  }
-
-  p {
-    &.content {
-      padding: 0;
     }
   }
 
@@ -543,6 +549,8 @@
   }
 
   .avatar {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
     height: 25px;
     width: 25px;
     overflow: hidden;
@@ -556,6 +564,8 @@
   }
 
   .nickname {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
     height: 25px;
     padding: 3px;
 
@@ -572,8 +582,12 @@
   }
 
   .content {
+    padding-top: 3px;
     margin: 0;
+    letter-spacing: 1px;
     font-weight: 400;
+    line-height: 24px;
+    word-break: break-word;
 
     .replied {
       color: var(--color-info);

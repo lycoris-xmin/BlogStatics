@@ -79,6 +79,44 @@ $(function () {
     },
     lazysizes: function () {
       lazySizes.loader.checkElems();
+    },
+    navlink: function (el, targetValue) {
+      el = el ? $(el) : $('a[href]');
+
+      $('a[href]').each((i, el) => {
+        const value = $(el).attr('href');
+
+        if (value && value.startsWith('http')) {
+          const host = new URL(value).hostname;
+
+          if (host.replace('www.', '') == location.host.replace('www.', '')) {
+            return;
+          }
+
+          $(el).attr('data-nav-link', value);
+          $(el).removeAttr('href');
+
+          if (!targetValue) {
+            targetValue = $(el).attr('target');
+          }
+
+          $(el).attr('data-nav-target', targetValue || '');
+          $(el).removeAttr('target');
+
+          $(el).on('click', function () {
+            const url = $(this).attr('data-nav-link');
+            const target = $(this).attr('data-nav-target');
+
+            const href = `/external/link?target=${encodeURIComponent(url)}`;
+
+            if (target == '_blank') {
+              window.open(href);
+            } else {
+              location.href = href;
+            }
+          });
+        }
+      });
     }
   };
 
